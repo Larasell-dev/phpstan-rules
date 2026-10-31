@@ -1,0 +1,48 @@
+{
+  "name": "larasell-dev/phpstan-rules",
+  "description": "PHPStan rules shared by the Larasell packages",
+  "type": "phpstan-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nils Haberkamp",
+      "email": "nils@larasell.dev"
+    }
+  ],
+  "require": {
+    "php": "^8.3",
+    "phpstan/phpstan": "^2.0",
+    "spaze/phpstan-disallowed-calls": "^4.15"
+  },
+  "require-dev": {
+    "illuminate/support": "^13.0",
+    "laravel/pint": "^1.32",
+    "pestphp/pest": "^4.7"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Larasell\\PhpstanRules\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "phpstan": {
+      "includes": [
+        "rules.neon"
+      ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    },
+    "sort-packages": true,
+    "platform": {
+      "php": "8.3"
+    }
+  },
+  "scripts": {
+    "lint": "vendor/bin/pint",
+    "lint:check": "vendor/bin/pint --test",
+    "test": "vendor/bin/pest"
+  }
+}

@@ -1,0 +1,13 @@
+# Installs only need composer.json, the .neon files and the docs.
+/.github export-ignore
+/breaking-changes export-ignore
+/scripts export-ignore
+/tests export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.release-please-manifest.json export-ignore
+/commitlint.config.js export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/phpunit.xml export-ignore
+/release-please-config.json export-ignore
