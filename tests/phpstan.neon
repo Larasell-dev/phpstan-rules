@@ -1,0 +1,8 @@
+includes:
+    - ../vendor/spaze/phpstan-disallowed-calls/extension.neon
+    - ../rules.neon
+
+parameters:
+    level: 0
+    paths:
+        - Fixtures

@@ -1,0 +1,12 @@
+parameters:
+    disallowedClasses:
+        # Apps can switch dates to Carbon\CarbonImmutable with Date::use(), which extends neither
+        # class, so a parameter typed with one throws a TypeError at runtime. Only parameter types
+        # are checked: returning, creating or calling these classes is fine.
+        -
+            class:
+                - 'Illuminate\Support\Carbon'
+                - 'Carbon\Carbon'
+            message: 'apps may use immutable dates; type-hint Carbon\CarbonInterface instead'
+            disallowInParamTypes: true
+            allowInUse: true

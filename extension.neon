@@ -1,0 +1,5 @@
+# For apps and packages that include PHPStan extensions by hand. With phpstan/extension-installer,
+# rules.neon and spaze/phpstan-disallowed-calls are registered automatically.
+includes:
+    - ../../spaze/phpstan-disallowed-calls/extension.neon
+    - rules.neon
